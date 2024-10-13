@@ -13,8 +13,12 @@ Book Appointment: Book an appointment between a patient and a doctor on a specif
 
 ## Prerequsites
 Java 8 or above: Core programming language used for backend logic.
+
 MySQL: Database to store information about patients, doctors, and appointments.
+
 JDBC (Java Database Connectivity): For connecting and executing queries in MySQL from Java.
+
 MySQL Connector/J: The official JDBC driver for MySQL.
+
 ### Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
