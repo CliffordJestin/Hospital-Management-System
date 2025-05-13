@@ -1,24 +1,37 @@
-# Hospital Management System🏥
-A Java-based Hospital Management System with MySQL database integration that allows users to manage patients, doctors, and appointments efficiently. The system offers basic CRUD (Create, Read, Update, Delete) functionalities for patients and doctors, as well as booking and managing appointments.
-## Features
-Add Patient: Allows adding a new patient with details like name, age, and gender.
+# 🏥 Hospital Management System with IoT-Based Vitals Monitoring
 
-View Patients: View a list of all patients stored in the database.
+A **Java-based Hospital Management System** with **MySQL** integration to efficiently manage patient, doctor, and appointment records. The system now includes an **IoT simulation module** that monitors patient vitals (heart rate and temperature) and **sends SMS alerts** if abnormal conditions are detected using **Twilio API**.
 
-Add Doctor: Allows adding a new doctor with details like name and specialization.
 
-View Doctors: View a list of all doctors in the hospital.
+## ✨ Features
 
-Book Appointment: Book an appointment between a patient and a doctor on a specific date.
+### Core Management System:
+- **Add Patient**: Input patient details like name, age, and gender.
+- **View Patients**: Display all registered patients.
+- **Add Doctor**: Register doctors with name and specialization.
+- **View Doctors**: List all doctors.
+- **Book Appointment**: Schedule appointments between patients and doctors.
 
-## Prerequsites
-Java 8 or above: Core programming language used for backend logic.
+### IoT-Based Vitals Monitoring:
+- **Vitals Class**: Represents vital signs data (heart rate, temperature) linked to patients.
+- **IOTSimulator**:
+  - Simulates vitals for a list of patients.
+  - Periodically generates random heart rate and temperature values.
+  - Inserts readings into the `Vitals` table in MySQL.
+  - **Sends SMS alerts** if vitals are out of the normal range using Twilio.
 
-MySQL: Database to store information about patients, doctors, and appointments.
 
-JDBC (Java Database Connectivity): For connecting and executing queries in MySQL from Java.
+## 🚨 Alert Criteria
 
-MySQL Connector/J: The official JDBC driver for MySQL.
+SMS alerts are triggered when any of the following is true:
+- **Heart rate** < 60 bpm or > 100 bpm
+- **Temperature** < 36.1 °C or > 37.8 °C
 
-### Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
+
+## 🧰 Prerequisites
+
+- **Java (JDK 8+)**
+- **MySQL**
+- **JDBC**
+- **MySQL Connector/J**
+- **Twilio Java SDK** (for SMS integration)
